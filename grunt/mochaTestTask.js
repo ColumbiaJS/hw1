@@ -6,6 +6,6 @@
       reporters: ['spec', 'html'],
       timeout: 4000
     },
-    src: ['test/**/*.spec.js']
+    src: ['src/**/*.spec.js']
   };
 })();

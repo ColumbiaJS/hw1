@@ -7,7 +7,7 @@
     },
     all: [
       'Gruntfile.js',
-      'lib/**/*.js',
+      'src/**/*.js',
       'test/**/*.js',
       'grunt/**/*.js'
     ],
@@ -17,7 +17,7 @@
       },
       src: [
         'test/{,*}*.js',
-        'lib/**/*.spec.js'
+        'src/**/*.spec.js'
       ]
     }
   };

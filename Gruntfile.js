@@ -21,7 +21,7 @@
       env       : process.env,
       watch     : {
         mochaTest : {
-          files: ['lib/**/*.js', 'test/**/*.spec.js'],
+          files: ['src/**/*.js', 'test/**/*.spec.js'],
           tasks: ['reload']
         }
       },

@@ -11,11 +11,11 @@
   gulp.task('default', ['mocha', 'watch']);
 
   gulp.task('watch', function () {
-    gulp.watch(['test/**/*.js', 'lib/**/*.js'], ['mocha']);
+    gulp.watch(['test/**/*.js', 'src/**/*.js'], ['mocha']);
   });
 
   gulp.task('lint', function () {
-    return gulp.src(['lib/**/*.js', 'test/**/*.js'])
+    return gulp.src(['src/**/*.js', 'test/**/*.js'])
                .pipe(jshint())
                .pipe(jshint.reporter('jshint-stylish'))
                .pipe(jscs({configPath: '.jscsrc'}));
@@ -28,7 +28,7 @@
   // mocha was outputting test results and would therefore interrupt
   // mocha's output
   gulp.task('mocha', ['lint'], function () {
-    return gulp.src(['lib/**/*.spec.js', 'test/**/*.js'], {read: false})
+    return gulp.src(['src/**/*.spec.js', 'test/**/*.js'], {read: false})
                .pipe(mocha({ reporter: 'spec' }))
                .on('error', gulpUtil.log);
   });
