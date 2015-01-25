@@ -18,8 +18,20 @@ var start = 2,
 var ballPosition = follower.swap(); // ballPosition should equal 1
 ```
 
-The first swap moves the ball from position 2 to 0, the second from 0 to 1.
+The first parameter, start, represents the starting position of the ball.  The second parameter, swaps, is an array of arrays representing the cup positions to be swapped, representing the cup's swapping of positions.
 
-Given the same list of swaps, starting with 0 would result in a final position of 2, while starting with 1 would result in a final position of 0.
+In this case, the first swap is:
+
+[0, 2]
+
+This means that the cup in position 0 is swapped with the cup in position 2.  When this swap happens, if the current position of the ball is either 0 or 2, the position of the ball will be swapped.  After the first swap in this case, the ball will be in position 0.
+
+We then have:
+
+[1, 0]
+
+meaning that the cup in position 1 is swapped with the cup in position 0.  The ball, which was under the cup in position 0 at the time, will therefer end in position 1, since this is the last swap in the array.
+
+Your job is to return the final position of the ball (consult the test cases if you need additional references or ask a question in the issues).
 
 There won't be any bad data in this exercise (that is, all start positions and swap lists will contain valid data), but note that this does not mean that the ball is swapped every time!
