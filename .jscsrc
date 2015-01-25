@@ -4,8 +4,8 @@
 
   "requireParenthesesAroundIIFE": true,
   "maximumLineLength": 100,
-  "validateLineBreaks": "LF",
-  "validateIndentation": 2,
+  "validateLineBreaks": null,
+  "validateIndentation": null,
 
   "disallowKeywords": ["with"],
   "disallowSpacesInsideObjectBrackets": null,
